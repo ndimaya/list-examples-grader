@@ -1,4 +1,4 @@
-CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+#CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
 
 rm -rf student-submission
 rm -rf grading-area
@@ -26,7 +26,7 @@ fi
 
 cd grading-area
 
-CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'
+CPATH='.;../lib/hamcrest-core-1.3.jar;../lib/junit-4.13.2.jar'
 javac -cp $CPATH *.java
 
 if [[ $? -ne 0 ]]
@@ -36,3 +36,7 @@ then
 fi
 
 java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt
+
+grep -r "OK"
+string pass = cat grep -r "ok"
+echo pass

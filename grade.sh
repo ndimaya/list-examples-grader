@@ -37,6 +37,7 @@ fi
 
 java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt
 
-grep -r "OK"
-string pass = cat grep -r "ok"
-echo pass
+if command | grep -r "OK"
+then 
+    echo "All tests passed, Grade is A."
+fi

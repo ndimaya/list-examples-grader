@@ -34,3 +34,5 @@ then
   echo "The program failed to compile, see compile error above"
   exit 1
 fi
+
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt
